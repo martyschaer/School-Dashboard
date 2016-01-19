@@ -23,7 +23,6 @@ Project for module 306
   - Reminders
   - Todo lists (sub tasks)
   - timetable (location, teacher)
-  - 
   
 ## Management
 All project management documents can be found on [google drive](https://drive.google.com/drive/folders/0B817XkuekfgYS1luV2RRSHpVOG8)
