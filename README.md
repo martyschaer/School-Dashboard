@@ -1,4 +1,4 @@
-# SchoolProject
+# SchoolProject [![Build Status](https://travis-ci.com/martyschaer/SchoolProject.svg?token=sbSe1s25snCdas4kvx7G&branch=master)](https://travis-ci.com/martyschaer/SchoolProject)
 Project for module 306
 
 # Ideas
