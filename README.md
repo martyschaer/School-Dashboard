@@ -11,7 +11,7 @@ Project for module 306
 	- Travis-CI
 	- Git @ Github
 	- Trello
-	- Google Drive
+	- Google Drive by Google
 	- MySQL
 	- Apache
 
