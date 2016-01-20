@@ -1,11 +1,13 @@
 #!bin/bash
 cd `dirname $0`
 
-tar -xzf package.tgz
-rm package.tgz
+pwd >> /var/www/d.txt
 
-cp .env build/.env
+#tar -xzf package.tgz
+#rm package.tgz
 
-rm -rf /var/www/old
-mv /var/www/html /var/www/old
-mv build /var/www/html
+#cp .env build/.env
+
+#rm -rf /var/www/old
+#mv /var/www/html /var/www/old
+#mv build /var/www/html
