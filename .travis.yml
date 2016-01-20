@@ -8,21 +8,14 @@ php:
 
 before_script:
  - phpenv config-rm xdebug.ini
-
-install:
  - composer install --prefer-source
 
 script:
  - phpunit
 
 after_success:
- - mkdir build
- - shopt -s extglob
- - mv !(build) build
- - tar -czf package.tgz build
  - export SSHPASS=$DEPLOY_PASS
- - sshpass -e scp -o stricthostkeychecking=no package.tgz $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
- - sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST $DEPLOY_PATH/scripts/deploy.sh
+ - cat deploy.sh | sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST
 
 env:
   global:
