@@ -8,6 +8,8 @@ php:
 
 before_script:
  - phpenv config-rm xdebug.ini
+
+install:
  - composer install --prefer-source
 
 script:
@@ -15,7 +17,6 @@ script:
 
 after_success:
  - mkdir build
- - echo "$DEPLOY_PATH"
  - shopt -s extglob
  - mv !(build) build
  - tar -czf package.tgz build
