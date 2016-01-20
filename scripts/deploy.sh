@@ -2,6 +2,7 @@
 cd `dirname $0`
 
 pwd >> /var/www/d.txt
+
 #tar -xzf package.tgz
 #rm package.tgz
 
