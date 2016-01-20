@@ -15,7 +15,7 @@ script:
 
 after_success:
  - export SSHPASS=$DEPLOY_PASS
- - cat deploy.sh | sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST
+ - cat deploy.sh | sshpass -e ssh -t -t $DEPLOY_USER@$DEPLOY_HOST
 
 env:
   global:
