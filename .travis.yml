@@ -16,7 +16,12 @@ script:
 after_success:
  - export SSHPASS=$DEPLOY_PASS
  - cd $TRAVIS_BUILD_DIR
- - cat deploy.sh | sshpass -e ssh -t -t $DEPLOY_USER@$DEPLOY_HOST
+ - sshpass -e ssh -t -t $DEPLOY_USER@$DEPLOY_HOST << EOF
+ - cd /var/www/html
+ - git clone https://github.com/martyschaer/SchoolProject .
+ - composer install
+ - cp /var/www/.env /var/www/html
+ - EOF
 
 env:
   global:
