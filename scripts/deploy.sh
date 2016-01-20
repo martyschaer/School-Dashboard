@@ -3,7 +3,7 @@ mv /var/www/html/package.tgz /var/www/package.tgz
 
 tar -xzf package.tgz
 
-rm package.tgz
+#rm package.tgz
 
 #cp /var/www/html/.env build/.env
 
