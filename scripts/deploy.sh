@@ -1,6 +1,4 @@
 #!/bin/bash
-cd /var/www/
-
 mv /var/www/html/package.tgz /var/www/package.tgz
 
 tar -xzf package.tgz
