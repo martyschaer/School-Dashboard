@@ -13,7 +13,7 @@ Project for module 306
 	- Trello
 	- Google Drive by Google
 	- MySQL
-	- Apache 2
+	- Apache
 
 ## Ideas
 - School Manager
