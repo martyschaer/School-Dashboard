@@ -30,6 +30,10 @@
                 display: inline-block;
             }
 
+            .title small {
+                font-size: 48px;
+            }
+
             .title {
                 font-size: 96px;
             }
@@ -38,7 +42,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title"><strong>The Project</strong><br>Kaderli <br>&<br> Sch&auml;r<br><small>Coming soon</small></div>
             </div>
         </div>
     </body>

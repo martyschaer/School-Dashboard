@@ -35,3 +35,8 @@ The server is reachable via http here: [46.101.226.85](http://46.101.226.85/)
 The management console is reachable here on [digitalocean](https://cloud.digitalocean.com/droplets/10094949)
 
 addition for testing autodeploy
+
+## Installation
+1. git clone
+2. composer install
+3. Copy .env.example to .env
