@@ -9,7 +9,7 @@ tar -zxvf build.tar.gz
 rm build.tar.gz
 
 echo "Composer install"
-composer install
+composer -n install
 
 echo "Copying .env to /var/www/html"
 cp /var/www/.env /var/www/html$
