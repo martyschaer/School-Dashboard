@@ -1,11 +1,12 @@
 #!/bin/bash
-echo "Starting deploy script: $(date +%Y-%m-%d %H:%M:%S)"
+echo "Starting deploy script: $(date +%Y-%m-%d.%H:%M:%S)"
 
 echo "Extracting tar file"
-rm -rf /var/www/html/*
+rm -rf /var/www/html/
+mkdir /var/www/html
 mv /var/www/build.tar.gz /var/www/html
 cd /var/www/html
-tar -zxvf build.tar.gz
+tar -zxf build.tar.gz
 rm build.tar.gz
 
 echo "Composer install"
