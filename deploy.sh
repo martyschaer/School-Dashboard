@@ -10,7 +10,7 @@ tar -zxf build.tar.gz
 rm build.tar.gz
 
 echo "Composer install"
-composer -n install --optimize-autoloader
+composer -nv install --optimize-autoloader
 
 echo "Copying .env to /var/www/html"
 cp /var/www/.env /var/www/html$
