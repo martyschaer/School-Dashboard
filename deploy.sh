@@ -1,9 +1,11 @@
 #!/bin/bash
-echo "Starting deploy script: $(date +%Y-%m-%d.%H:%M:%S)"
+echo "Starting deploy script: $(date +%Y-%m-%d %H:%M:%S)"
+
+# Delete current contents of the html folder
+rm -rf /var/www/html/*
+cp /var/www/build.tar.gz /var/www/html
 cd /var/www/html
-echo "Checking out branch: $1"
-git clone https://github.com/martyschaer/SchoolProject --branch $1 .
-echo "Finished git cloning; Starting composer"
+tar -zxvf build.tar.gz
+rm build.tar.gz
 composer install
-echo "Composer finished; Copying .env file"
 cp /var/www/.env /var/www/html
