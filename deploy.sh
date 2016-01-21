@@ -10,7 +10,8 @@ tar -zxf build.tar.gz
 rm build.tar.gz
 
 echo "Composer install"
-composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts --optimize-autoloader
+composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts --no-autoloader
+composer dumpautoload
 
 echo "Copying .env to /var/www/html"
 cp /var/www/.env /var/www/html$
