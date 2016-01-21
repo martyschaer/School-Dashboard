@@ -17,7 +17,7 @@ after_success:
  - export SSHPASS=$DEPLOY_PASS
  - cd $TRAVIS_BUILD_DIR
  - sshpass -e scp -o stricthostkeychecking=no deploy.sh $DEPLOY_USER@$DEPLOY_HOST:/var/www/
- - sshpass -e ssh -f -t -t $DEPLOY_USER@$DEPLOY_HOST "chmod +x /var/www/deploy.sh; /var/www/deploy.sh $TRAVIS_BRANCH"
+ - sshpass -e ssh -f -t -t $DEPLOY_USER@$DEPLOY_HOST "chmod +x /var/www/deploy.sh; /var/www/deploy.sh $TRAVIS_BRANCH >> /var/www/log/deploy.log"
 
 env:
   global:
