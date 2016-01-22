@@ -25,14 +25,14 @@ Project for module 306
   - timetable (location, teacher)
   
 ## Management
-All project management documents can be found on [google drive](https://drive.google.com/drive/folders/0B817XkuekfgYS1luV2RRSHpVOG8)
+All project management documents can be found on [Google Drive](https://drive.google.com/drive/folders/0B817XkuekfgYS1luV2RRSHpVOG8)
 
 
 ## Technical
 ### Webserver
 The server is reachable via http here: [46.101.226.85](http://46.101.226.85/)
 
-The management console is reachable here on [digitalocean](https://cloud.digitalocean.com/droplets/10094949)
+The management console is reachable here on [DigitalOcean](https://cloud.digitalocean.com/droplets/10094949)
 
 addition for testing autodeploy
 
@@ -41,4 +41,3 @@ addition for testing autodeploy
 2. `composer install`
 3. `cp .env.example .env`
 4. Edit settings in .env
-added for testing
