@@ -37,7 +37,8 @@ The management console is reachable here on [digitalocean](https://cloud.digital
 addition for testing autodeploy
 
 ## Installation
-1. git clone
-2. composer install
-3. Copy .env.example to .env
+1. `git clone https://github.com/martyschaer/SchoolProject`
+2. `composer install`
+3. `cp .env.example .env`
+4. Edit settings in .env
 added for testing
