@@ -11,7 +11,7 @@ Project for module 306
 	- Travis-CI
 	- Git @ Github
 	- Trello
-	- Google Drive by Google
+	- Google Drive
 	- MySQL
 	- Apache
 
@@ -40,3 +40,4 @@ addition for testing autodeploy
 1. git clone
 2. composer install
 3. Copy .env.example to .env
+added for testing
