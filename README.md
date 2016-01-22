@@ -40,3 +40,4 @@ addition for testing autodeploy
 1. git clone
 2. composer install
 3. Copy .env.example to .env
+added for testing
