@@ -1,4 +1,4 @@
-# SchoolProject [![Build Status](https://travis-ci.com/martyschaer/SchoolProject.svg?token=sbSe1s25snCdas4kvx7G&branch=master)](https://travis-ci.com/martyschaer/SchoolProject)
+# School-Dashboard [![Build Status](https://travis-ci.com/martyschaer/SchoolProject.svg?token=sbSe1s25snCdas4kvx7G&branch=master)](https://travis-ci.com/martyschaer/SchoolProject)
 Project for module 306
 
 # Ideas
@@ -29,15 +29,24 @@ All project management documents can be found on [Google Drive](https://drive.go
 
 
 ## Technical
+###Server management
+The management console is reachable here on [DigitalOcean](https://cloud.digitalocean.com/droplets/10094949).
+
+###Countinous Integration
+[Travis CI](https://travis-ci.com/martyschaer/SchoolProject)
+
 ### Webserver
-The server is reachable via http here: [46.101.226.85](http://46.101.226.85/)
+The deployment server can be accessed here: [46.101.226.85](http://46.101.226.85/)
 
-The management console is reachable here on [DigitalOcean](https://cloud.digitalocean.com/droplets/10094949)
+##Documentation
+* [Bootstrap](http://getbootstrap.com/)
+* [Bootstrap Material Design](http://fezvrasta.github.io/bootstrap-material-design/)
+* [Material icons](https://design.google.com/icons/)
 
-addition for testing autodeploy
-
-## Installation
+### Installation
 1. `git clone https://github.com/martyschaer/SchoolProject`
 2. `composer install`
-3. `cp .env.example .env`
-4. Edit settings in .env
+3. `bower install`
+4. Copy .env.example to .env
+5. Adjust settings in .env
+6. WIP: Database Migrations
