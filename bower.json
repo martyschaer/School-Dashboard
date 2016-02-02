@@ -17,7 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.2",
-    "material-design-iconic-font": "^2.2.0"
+    "material-design-iconic-font": "^2.2.0",
+    "bootstrap-material-design": "^0.5.7"
   }
 }
