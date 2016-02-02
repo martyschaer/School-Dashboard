@@ -12,6 +12,9 @@ rm build.tar.gz
 echo "Composer install"
 composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts --optimize-autoloader
 
+echo "Bower install"
+bower install --allow-root
+
 echo "Copying .env to /var/www/html"
 cp /var/www/.env /var/www/html$
 
