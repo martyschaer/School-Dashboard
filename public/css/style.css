@@ -1,0 +1,18 @@
+/**
+ * Sticky-Footer
+ */
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
+}
+
+.footer {
+	/*TODO: Find a way to use the colors from bootstrap*/
+	background-color: #4CAF50;
+	color: rgba(255, 255, 255, .84);
+}
