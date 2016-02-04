@@ -23,22 +23,20 @@ Project for module 306
   - Reminders
   - Todo lists (sub tasks)
   - timetable (location, teacher)
-  
-## Management
-All project management documents can be found on [Google Drive](https://drive.google.com/drive/folders/0B817XkuekfgYS1luV2RRSHpVOG8)
 
+## Management
+All project management documents can be found on [Google Drive](https://drive.google.com/drive/folders/0B817XkuekfgYS1luV2RRSHpVOG8).
+
+The Scrum Trello board can be found [here](https://trello.com/b/Ol8jBTos/schoolproject).
 
 ## Technical
-###Server management
+### Server management
 The management console is reachable here on [DigitalOcean](https://cloud.digitalocean.com/droplets/10094949).
 
-###Countinous Integration
-[Travis CI](https://travis-ci.com/martyschaer/SchoolProject)
+The Server can be accessed here: [46.101.226.85](http://46.101.226.85/)
 
-### Webserver
-The deployment server can be accessed here: [46.101.226.85](http://46.101.226.85/)
-
-##Documentation
+## Documentation
+### Library API-Docs
 * [Bootstrap](http://getbootstrap.com/)
 * [Bootstrap Material Design](http://fezvrasta.github.io/bootstrap-material-design/)
 * [Material icons](https://design.google.com/icons/)
