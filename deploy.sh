@@ -22,7 +22,7 @@ echo "Generating encryption key"
 php artisan key:generate
 
 echo "Executing database migrations and seedings"
-yes | php artisan migrate:refresh --seed
+php artisan migrate:refresh --seed --force
 
 echo "Setting correct permissions"
 chown -R www-data:www-data /var/www
