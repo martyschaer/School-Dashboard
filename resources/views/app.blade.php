@@ -32,10 +32,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">School-Dashboard</a>
+              <a class="navbar-brand" href="{{url('/')}}">School-Dashboard</a>
             </div>
             <div class="navbar-collapse collapse navbar-warning-collapse">
-                @if(Auth::check()):
+                @if(Auth::check())
                     @include('navigation.auth')
                 @else
                     @include('navigation.guest')

@@ -1,9 +1,8 @@
 <ul class="nav navbar-nav">
-  <li class="active"><a href="#">Home</a></li>
+  <li><a href="{{url('/dashboard')}}">Dashboard</a></li>
 </ul>
-welcome you are logged in ...
-<form class="navbar-form navbar-right">
-  <div class="form-group">
-    <input type="text" class="form-control col-md-8" placeholder="Search">
-  </div>
-</form>
+
+<p class='navbar-text'>Logged in as {{Auth::user()->email}}</p>
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="{{url('logout')}}">Logout</a></li>
+</ul>
