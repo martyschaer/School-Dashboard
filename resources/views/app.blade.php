@@ -11,22 +11,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ABCDEF">
         <!-- Fonts -->
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+        <!--<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="{{URL::asset('vendor/bootstrap/dist/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{URL::asset('vendor/bootstrap-material-design/dist/css/bootstrap-material-design.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{URL::asset('vendor/bootstrap-material-design/dist/css/ripples.min.css')}}">
+        <!--<link rel="stylesheet" type="text/css" href="{{URL::asset('vendor/bootstrap-material-design/dist/css/bootstrap-material-design.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{URL::asset('vendor/bootstrap-material-design/dist/css/ripples.min.css')}}">-->
         <link rel="stylesheet" type="text/css" href="{{URL::asset('css/style.css')}}">
         <!-- Javascript -->
         <script src="{{URL::asset('vendor/jquery/dist/jquery.min.js')}}"></script>
-        <script src="{{URL::asset('vendor/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-        <script src="{{URL::asset('vendor/bootstrap-material-design/dist/js/material.min.js')}}"></script>
-        <script src="{{URL::asset('vendor/bootstrap-material-design/dist/js/ripples.min.js')}}"></script>
         @yield('headJS')
     </head>
     <body>
         <!-- Navigation -->
-        <nav class="navbar navbar-success">
+        <nav class="navbar navbar-default">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
@@ -55,6 +53,11 @@
         <footer class="footer ">
             @include('footer')
         </footer>
+
+        <!-- Body JS -->
+        <script src="{{URL::asset('vendor/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+        <!--<script src="{{URL::asset('vendor/bootstrap-material-design/dist/js/material.min.js')}}"></script>
+        <script src="{{URL::asset('vendor/bootstrap-material-design/dist/js/ripples.min.js')}}"></script>-->
         @yield('bodyJS')
     </body>
 </html>
