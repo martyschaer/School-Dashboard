@@ -16,7 +16,7 @@ echo "Bower install"
 bower install --allow-root
 
 echo "Copying .env to /var/www/html"
-cp /var/www/.env /var/www/html$
+cp /var/www/.env /var/www/html
 
 echo "Generating encryption key"
 php artisan key:generate
