@@ -17,12 +17,12 @@ Project for module 306
 
 ## Ideas
 - School Manager
-  - Grades
-  - Homework
-  - Tests
-  - Reminders
-  - Todo lists (sub tasks)
-  - timetable (location, teacher)
+	- Grades
+	- Homework
+	- Tests
+	- Reminders
+	- Todo lists (sub tasks)
+	- timetable (location, teacher)
 
 ## Management
 All project management documents can be found on [Google Drive](https://drive.google.com/drive/folders/0B817XkuekfgYS1luV2RRSHpVOG8).
@@ -47,4 +47,5 @@ The Server can be accessed here: [46.101.226.85](http://46.101.226.85/)
 3. `bower install`
 4. Copy .env.example to .env
 5. Adjust settings in .env
-6. WIP: Database Migrations
+6. `php artisan key:generate`
+7. `php artisan migrate:refresh --seed`
