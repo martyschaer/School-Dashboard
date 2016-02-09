@@ -57,6 +57,20 @@
 
     </div>
     @endforeach
+    <div class="col-md-12">
+        {{ Form::open(['url' => 'task', 'method' => 'POST', 'class' => 'form-inline']) }}
+          <div class="form-group">
+            <div class="input-group">
+              <input class="form-control" type="text" name="taskDescription" placeholder="New Task">
+              
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i></button>
+          
+        {{ Form::close() }}
+
+        
+    </div>
 </div>
 
 <!-- Agenda -->

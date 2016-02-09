@@ -22,5 +22,7 @@ Route::group(['middleware' => 'web'], function () {
         }
         return view('index');
     });
-    Route::get('/dashboard', "DashboardController@index");
+    Route::get('dashboard', "DashboardController@index");
+
+    Route::post('task', "TaskController@store");
 });
