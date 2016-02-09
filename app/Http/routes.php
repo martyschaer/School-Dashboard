@@ -15,6 +15,10 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/', function () {
         if(Auth::check()) {
             return Redirect::to('dashboard');
+        } else {
+            //TODO: This is a temporary redirect to the login page, because
+            //      the home page isn't finished yet.
+            return Redirect::to('login');
         }
         return view('index');
     });

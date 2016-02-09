@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-<div class="col-md-12">
+<!--<div class="col-md-12">
     <h1>Hello World!</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -30,5 +30,6 @@
         <li>Ut enim ad</li>
         <li>ullamco laboris</li>
     </ul>
-</div>
+</div>-->
+<!-- This shouldn't get called -->
 @endsection
