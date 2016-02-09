@@ -75,7 +75,10 @@
             </tr>
         </thead>
         <tbody>
-
+            <tr>
+                <td>Tomorrow</td>
+                <td>Go to work</td>
+            </tr>
         </tbody>
     </table>
 </div>
