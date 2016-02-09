@@ -21,3 +21,8 @@ main {
 .done {
     text-decoration: line-through;
 }
+
+#timetable {
+    height: 500px;
+    overflow: scroll;
+}

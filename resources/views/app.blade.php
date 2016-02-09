@@ -50,10 +50,10 @@
         </main>
 
         <!-- Footer -->
-        <footer class="footer ">
+       <!-- <footer class="footer ">
             @include('footer')
         </footer>
-
+-->
         <!-- Body JS -->
         <script src="{{URL::asset('vendor/bootstrap/dist/js/bootstrap.min.js')}}"></script>
         <!--<script src="{{URL::asset('vendor/bootstrap-material-design/dist/js/material.min.js')}}"></script>

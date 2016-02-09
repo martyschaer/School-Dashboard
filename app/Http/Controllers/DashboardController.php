@@ -8,8 +8,6 @@ use App\Http\Controllers\Controller;
 use App\Task;
 use Auth;
 use Input;
-use Request;
-
 class DashboardController extends Controller
 {
 
