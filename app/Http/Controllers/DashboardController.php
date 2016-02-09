@@ -22,7 +22,6 @@ class DashboardController extends Controller
     {
 
         $tasks = Auth::user()->tasks;
-        return $tasks;
-        return View('dashboard.index');
+        return View('dashboard.index', compact('tasks'));
     }
 }
