@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Task;
+use Auth;
+use Input;
+use Request;
 
 class DashboardController extends Controller
 {
@@ -17,6 +20,9 @@ class DashboardController extends Controller
 
     public function index()
     {
+
+        $tasks = Auth::user()->tasks;
+        return $tasks;
         return View('dashboard.index');
     }
 }
