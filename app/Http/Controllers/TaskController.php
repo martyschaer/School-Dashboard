@@ -18,11 +18,14 @@ class TaskController extends Controller
      * Checks if the current user has the permissions to alter the
      * task w owns the task
      */
-    public function checkUser()
+    public function checkPermissions(int $id)
     {
 
     }
 
+    /**
+     *  Creates a new task in the database
+     */
     public function store(\Illuminate\Http\Request $request)
     {
         $task = new Task([
@@ -30,15 +33,15 @@ class TaskController extends Controller
             'is_done' => 0
         ]);
 
-        $user = Auth::user();
-        $user -> tasks() -> save($task);
+        Auth::user() -> tasks() -> save($task);
 
         return Redirect::to('dashboard');
     }
 
     public function update(int $id)
     {
-
+        $this->checkPermissions($id);
+        return "Updated $id";
     }
 
     public function delete(int $id)
