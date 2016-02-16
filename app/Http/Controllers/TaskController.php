@@ -20,7 +20,12 @@ class TaskController extends Controller
      */
     public function checkPermissions(int $id)
     {
-
+        $task = Task::findOrFail($id);
+        if(Auth::user()->id === $id) {
+            return $task;
+        } else {
+            return Redirect::to('dashboard');
+        }
     }
 
     /**
@@ -46,7 +51,7 @@ class TaskController extends Controller
 
     public function delete(int $id)
     {
-        $this->checkPermissions($id);
+        $task = $this->checkPermissions($id);
         return "Deleted $id";
     }
 }
