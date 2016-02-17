@@ -4,7 +4,7 @@
 <!-- Timetable -->
 <!-- TODO: This is just temporary to have something to show -->
 <div id="timetable" class="col-md-8">
-    <table class="table table-bordered table-hover">
+   <!-- <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>Time</th>
@@ -28,7 +28,7 @@
                 </tr>
             @endfor
         </tbody>
-    </table>
+    </table>-->
 
 </div>
 
@@ -77,7 +77,7 @@
 <!-- TODO: Only temporary like the timetable -->
 <br>
 <div id="agenda" class="col-md-12">
-    <table class="table table-bordered table-hover">
+    <!--<table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>
@@ -94,6 +94,6 @@
                 <td>Go to work</td>
             </tr>
         </tbody>
-    </table>
+    </table>-->
 </div>
 @endsection
