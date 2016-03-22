@@ -3,7 +3,8 @@
   "description": "Modul 306 Project",
   "main": "",
   "authors": [
-    "Severin Kaderli <severin.kaderli@gmail.com>"
+    "Severin Kaderli <severin.kaderli@gmail.com>",
+    "Marius Schär <marius.schaer@gmail.com>"
   ],
   "license": "GPL2",
   "homepage": "https://github.com/martyschaer/SchoolProject",
@@ -17,7 +18,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-material-design": "^0.5.7",
-    "bootstrap-datepicker": "eternicode/bootstrap-datepicker#^1.6.0"
+    "bootstrap-datepicker": "^1.6.0",
+    "bootstrap-sass": "^3.3.6"
   }
 }

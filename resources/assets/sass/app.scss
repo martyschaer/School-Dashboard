@@ -1,2 +1,31 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "_variables.scss";
+@import "../vendor/bootstrap-sass/assets/stylesheets/bootstrap";
 
+/**
+ * Sticky-Footer
+ */
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
+}
+
+.footer {
+	/*TODO: Find a way to use the colors from bootstrap*/
+	background-color: #f8f8f8;
+	color: #000;
+	border-top: 1px solid #e7e7e7;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+#timetable {
+    height: 500px;
+    overflow: scroll;
+}

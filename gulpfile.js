@@ -1,16 +1,23 @@
-var elixir = require('laravel-elixir');
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    cssnano = require('gulp-cssnano'),
+    //eslint = require('gulp-eslint'),
+    //uglify = require('gulp-uglify'),
+    concat = require('gulp-concat');
 
-/*
- |--------------------------------------------------------------------------
- | Elixir Asset Management
- |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Sass
- | file for our application, as well as publishing vendor resources.
- |
- */
+gulp.task('sass', function () {
+    return gulp.src('resources/assets/sass/app.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('resources/assets/css'))
 
-elixir(function(mix) {
-    mix.sass('app.scss');
+});
+
+gulp.task('css', ['sass'], function () {
+    return gulp.src([
+            'resources/assets/css/**/*',
+            'resources/assets/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css'
+        ])
+        .pipe(cssnano())
+        .pipe(concat('app.css'))
+        .pipe(gulp.dest('public/assets/css/'));
 });
