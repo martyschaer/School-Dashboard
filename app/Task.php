@@ -21,6 +21,8 @@ class Task extends Model
         'description', 'is_done', 'remind_at', 'due_at'
     ];
 
+    protected $dates = ['created_at', 'updated_at'];
+
     /**
      * Creates a relation between tasks and user models.
      *

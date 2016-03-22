@@ -21,6 +21,7 @@
         <!--<link rel="stylesheet" type="text/css" href="{{URL::asset('vendor/bootstrap-material-design/dist/css/bootstrap-material-design.min.css')}}">
         <link rel="stylesheet" type="text/css" href="{{URL::asset('vendor/bootstrap-material-design/dist/css/ripples.min.css')}}">-->
         <link rel="stylesheet" type="text/css" href="{{URL::asset('css/style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{URL::asset('vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}">
         <!-- Javascript -->
         <script src="{{URL::asset('vendor/jquery/dist/jquery.min.js')}}"></script>
         @yield('headJS')
@@ -59,6 +60,7 @@
 -->
         <!-- Body JS -->
         <script src="{{URL::asset('vendor/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+        <script src="{{URL::asset("vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js")}}"></script>
         <script src="{{URL::asset('js/rest.js')}}"></script>
         <!--<script src="{{URL::asset('vendor/bootstrap-material-design/dist/js/material.min.js')}}"></script>
         <script src="{{URL::asset('vendor/bootstrap-material-design/dist/js/ripples.min.js')}}"></script>-->
