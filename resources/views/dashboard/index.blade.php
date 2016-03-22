@@ -53,7 +53,7 @@
             {{$task->description}}
             </p>
         </div>
-        <div class="col-md-1"><i class="fa fa-trash"></i></div>
+        <div class="col-md-1"><i data-taskid="{{$task->id}}" class="task-delete fa fa-trash"></i></div>
 
     </div>
     @endforeach
@@ -61,7 +61,7 @@
         {{ Form::open(['url' => 'task', 'method' => 'POST', 'class' => 'form-inline']) }}
           <div class="form-group">
             <div class="input-group">
-              <input class="form-control" type="text" name="taskDescription" placeholder="New Task">
+              <input class="form-control" type="text" name="description" placeholder="New Task">
               
             </div>
           </div>

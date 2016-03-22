@@ -2,43 +2,49 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use App\Task;
 use Auth;
-use Input;
+use Illuminate\Support\Facades\Input;
 use Redirect;
 
+/**
+ * Class TaskController
+ * @package App\Http\Controllers
+ *
+ * @author Severin Kaderli
+ */
 class TaskController extends Controller
 {
 
     /**
-     * Checks if the current user has the permissions to alter the
-     * task w owns the task
+     * Checks if the current user has permission to access the task. If not
+     * the user is redirected to the dashboard.
+     *
+     * @param int $id
+     * @return mixed
      */
     public function checkPermissions(int $id)
     {
         $task = Task::findOrFail($id);
-        if(Auth::user()->id === $id) {
+        if (Auth::user()->id === $task->user->id) {
             return $task;
         } else {
-            return Redirect::to('dashboard');
+            return "No Permission!";
         }
     }
 
     /**
-     *  Creates a new task in the database
+     * Creates a new task in the database.
+     *
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(\Illuminate\Http\Request $request)
+    public function store()
     {
-        $task = new Task([
-            'description' => $request -> taskDescription,
-            'is_done' => 0
-        ]);
+        $task = new Task(Input::all());
 
-        Auth::user() -> tasks() -> save($task);
+        Auth::user()->tasks()->save($task);
 
         return Redirect::to('dashboard');
     }
@@ -49,9 +55,13 @@ class TaskController extends Controller
         return "Updated $id";
     }
 
-    public function delete(int $id)
+    /**
+     * @param int $id
+     * @return string
+     */
+    public function destroy(int $id)
     {
         $task = $this->checkPermissions($id);
-        return "Deleted $id";
+        $task->destroy($id);
     }
 }

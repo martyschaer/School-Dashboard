@@ -3,6 +3,11 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+ * Creates the users table.
+ *
+ * @author Severin Kaderli
+ */
 class CreateUsersTable extends Migration
 {
     /**

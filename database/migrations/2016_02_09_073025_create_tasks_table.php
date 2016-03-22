@@ -20,9 +20,9 @@ class CreateTasksTable extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->increments('id');
             $table->text('description');
-            $table->boolean('is_done');
-            $table->timestamp('remind_at');
-            $table->timestamp('due_at');
+            $table->boolean('is_done')->default(0);
+            $table->dateTime('remind_at');
+            $table->dateTime('due_at');
             $table->integer('user_id')->unsigned();
             $table->timestamps();
 

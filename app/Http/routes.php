@@ -25,4 +25,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('dashboard', "DashboardController@index");
 
     Route::post('task', "TaskController@store");
+
+    Route::delete('task/{id}/delete', "TaskController@destroy");
 });
