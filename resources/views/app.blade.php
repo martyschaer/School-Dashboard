@@ -19,7 +19,6 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="{{URL::asset('assets/css/app.css')}}">
         <!-- Javascript -->
-        <script src="{{URL::asset('vendor/jquery/dist/jquery.min.js')}}"></script>
         @yield('headJS')
     </head>
     <body>
@@ -55,11 +54,7 @@
         </footer>
 -->
         <!-- Body JS -->
-        <script src="{{URL::asset('vendor/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-        <script src="{{URL::asset("vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js")}}"></script>
-        <script src="{{URL::asset('js/rest.js')}}"></script>
-        <!--<script src="{{URL::asset('vendor/bootstrap-material-design/dist/js/material.min.js')}}"></script>
-        <script src="{{URL::asset('vendor/bootstrap-material-design/dist/js/ripples.min.js')}}"></script>-->
+        <script src="{{URL::asset('assets/js/app.js')}}"></script>
         @yield('bodyJS')
     </body>
 </html>
