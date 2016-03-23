@@ -49,3 +49,5 @@ The Server can be accessed here: [46.101.226.85](http://46.101.226.85/)
 5. Adjust settings in .env
 6. `php artisan key:generate`
 7. `php artisan migrate:refresh --seed`
+8. `npm install`
+9. `gulp build`

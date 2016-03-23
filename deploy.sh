@@ -24,6 +24,12 @@ php artisan key:generate
 echo "Executing database migrations and seedings"
 php artisan migrate:refresh --seed --force
 
+echo "Installing npm packages"
+npm install
+
+echo "Building frontend assets"
+gulp build
+
 echo "Setting correct permissions"
 chown -R www-data:www-data /var/www
 chmod -R 775 /var/www/html/bootstrap/cache/ /var/www/html/storage

@@ -1,5 +1,6 @@
 /vendor
-/public/vendor
+/resources/assets/vendor
+/resources/assets/css
 /node_modules
 /bower_components
 Homestead.yaml

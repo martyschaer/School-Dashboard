@@ -3,6 +3,11 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+ * Creates the Tasks table.
+ *
+ * @author Severin Kaderli
+ */
 class CreateTasksTable extends Migration
 {
     /**
@@ -15,9 +20,10 @@ class CreateTasksTable extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->increments('id');
             $table->text('description');
-            $table->boolean('is_done');
+            $table->boolean('is_done')->default(0);
+            $table->dateTime('remind_at');
+            $table->dateTime('due_at');
             $table->integer('user_id')->unsigned();
-            //TODO: Add more fields for time of done, parent_id and so on...
             $table->timestamps();
 
             //Foreign keys

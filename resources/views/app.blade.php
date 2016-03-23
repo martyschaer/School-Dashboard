@@ -10,16 +10,15 @@
         <!-- Other Meta Information -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ABCDEF">
+        <!-- Framework -->
+        <meta name="csrf-token" content="{{csrf_token()}}">
+        <meta name="base-url" content="{{URL::to("/")}}">
         <!-- Fonts -->
         <!--<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <!-- Stylesheets -->
-        <link rel="stylesheet" type="text/css" href="{{URL::asset('vendor/bootstrap/dist/css/bootstrap.min.css')}}">
-        <!--<link rel="stylesheet" type="text/css" href="{{URL::asset('vendor/bootstrap-material-design/dist/css/bootstrap-material-design.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{URL::asset('vendor/bootstrap-material-design/dist/css/ripples.min.css')}}">-->
-        <link rel="stylesheet" type="text/css" href="{{URL::asset('css/style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{URL::asset('assets/css/app.css')}}">
         <!-- Javascript -->
-        <script src="{{URL::asset('vendor/jquery/dist/jquery.min.js')}}"></script>
         @yield('headJS')
     </head>
     <body>
@@ -55,9 +54,7 @@
         </footer>
 -->
         <!-- Body JS -->
-        <script src="{{URL::asset('vendor/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-        <!--<script src="{{URL::asset('vendor/bootstrap-material-design/dist/js/material.min.js')}}"></script>
-        <script src="{{URL::asset('vendor/bootstrap-material-design/dist/js/ripples.min.js')}}"></script>-->
+        <script src="{{URL::asset('assets/js/app.js')}}"></script>
         @yield('bodyJS')
     </body>
 </html>
