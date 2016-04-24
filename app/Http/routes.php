@@ -13,7 +13,7 @@
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
     Route::get('/', function () {
-        if(Auth::check()) {
+        if (Auth::check()) {
             return Redirect::to('dashboard');
         } else {
             //TODO: This is a temporary redirect to the login page, because
@@ -27,4 +27,5 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('task', "TaskController@store");
 
     Route::delete('task/{id}/delete', "TaskController@destroy");
+    Route::patch('task/{id}/check', "TaskController@check");
 });

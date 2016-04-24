@@ -55,13 +55,23 @@ class TaskController extends Controller
         return "Updated $id";
     }
 
+    public function check(int $id)
+    {
+        $task = $this->checkPermissions($id);
+        $task->is_done = 1 - $task->is_done;
+        $task->update();
+    }
+
     /**
      * @param int $id
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function destroy(int $id)
     {
         $task = $this->checkPermissions($id);
         $task->destroy($id);
+
+        $tasks = Auth::user()->tasks;
+        return View('tasks.list', compact('tasks'));
     }
 }

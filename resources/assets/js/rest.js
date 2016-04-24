@@ -11,15 +11,26 @@ $.ajaxSetup({
 var baseUrl = $("meta[name='base-url']").attr("content");
 
 //<a data-taskid="3">Delete</a>
-$(".task-delete").click(function () {
+$("#tasks").on("click", ".task-delete", function () {
+    if (!confirm("Do you really want to delete this task?")) {
+        return true;
+    }
     $.ajax({
         method: "DELETE",
         url: baseUrl + "/task/" + $(this).data("taskid") + "/delete"
-    })
-    .done(function () {
-        //Refresh ui here
-    })
-    .error(function (msg) {
-        console.error("Error:", msg.responseText);
+    }).done(function (response) {
+        $("#tasks").html(response);
+    }).error(function (response) {
+        console.error("Error:", response.responseText);
+    });
+}).on("change", ".task-check", function () {
+    $(this).parent().siblings(".task-description").children("p").toggleClass("done");
+    $.ajax({
+        method: "PATCH",
+        url: baseUrl + "/task/" + $(this).data("taskid") + "/check"
+    }).done(function () {
+        // Success!
+    }).error(function (response) {
+        console.error("Error:", response.responseText);
     });
 });
