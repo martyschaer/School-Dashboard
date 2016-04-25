@@ -22,7 +22,7 @@ gulp.task('sass', function () {
 gulp.task('css', ['sass'], function () {
     return gulp.src([
             'resources/assets/css/**/*',
-            'resources/assets/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css'
+            'resources/assets/vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'
         ])
         .pipe(cssnano())
         .pipe(concat('app.css'))
@@ -47,8 +47,9 @@ gulp.task('lint', function () {
 gulp.task('js', ['lint'], function () {
     return gulp.src([
             'resources/assets/vendor/jquery/dist/jquery.min.js',
+            'resources/assets/vendor/moment/min/moment.min.js',
             'resources/assets/vendor/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-            'resources/assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
+            'resources/assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
             'resources/assets/js/**/*'
         ])
         .pipe(uglify())

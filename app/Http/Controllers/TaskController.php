@@ -25,7 +25,7 @@ class TaskController extends Controller
      * @param int $id
      * @return mixed
      */
-    public function checkPermissions(int $id)
+    public function checkPermissions($id)
     {
         $task = Task::findOrFail($id);
         if (Auth::user()->id === $task->user->id) {
@@ -42,26 +42,60 @@ class TaskController extends Controller
      */
     public function store()
     {
+        // Create a new task from the input data
         $task = new Task(Input::all());
-
         Auth::user()->tasks()->save($task);
 
         return Redirect::to('dashboard');
     }
 
-    public function update(int $id)
+    /**
+     * Updates a specific task in the database.
+     *
+     * @param int $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function update($id)
     {
         $this->checkPermissions($id);
-        return "Updated $id";
+
+        // Update the task with the new data
+        $task = Task::findOrFail($id);
+        $task->update(Input::all());
+
+        // Return the updates list of tasks
+        $tasks = Auth::user()->tasks;
+        return View('tasks.list', compact('tasks'));
     }
 
     /**
-     * @param int $id
-     * @return string
+     * Toggles the state of a task between finished and not finished.
+     *
+     * @param $id
+     * @return void
      */
-    public function destroy(int $id)
+    public function check($id)
+    {
+        $task = $this->checkPermissions($id);
+
+        // Toggle between 0 and 1
+        $task->is_done = 1 - $task->is_done;
+        $task->update();
+    }
+
+    /**
+     * Deletes a specific task from the database.
+     *
+     * @param int $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function destroy($id)
     {
         $task = $this->checkPermissions($id);
         $task->destroy($id);
+
+        // Return the updated list of tasks
+        $tasks = Auth::user()->tasks;
+        return View('tasks.list', compact('tasks'));
     }
 }

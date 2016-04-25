@@ -18,10 +18,15 @@ class Task extends Model
      * @var array
      */
     protected $fillable = [
-        'description', 'is_done', 'remind_at', 'due_at'
+        'description', 'is_done', 'due_at'
     ];
 
-    protected $dates = ['created_at', 'updated_at'];
+    /**
+     * All attributes that should be represented as a Carbon instance.
+     *
+     * @var array
+     */
+    protected $dates = ['created_at', 'updated_at', 'due_at'];
 
     /**
      * Creates a relation between tasks and user models.
