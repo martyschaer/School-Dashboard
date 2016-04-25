@@ -3,37 +3,12 @@
 
         <!-- Timetable -->
 <!-- TODO: This is just temporary to have something to show -->
-<div id="timetable" class="col-md-8">
-    <!-- <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>Time</th>
-                <th>Montag</th>
-                <th>Dienstag</th>
-                <th>Mittwoch</th>
-                <th>Donnerstag</th>
-                <th>Freitag</th>
-            </tr>
-        </thead>
-        <tbody>
-            @for($i=1;$i <=48;$i++)
-            <tr>
-            @for($j=0;$j < 6;$j++)
-    @if($j==0)
-            <td>{{$i/2}}</td>
-                    @else
-            <td>&nbsp;</td>
-                    @endif
-    @endfor
-            </tr>
-        @endfor
-            </tbody>
-        </table>-->
-
+<div id="timetable" class="col-md-6">
+    nothing here...
 </div>
 
 <!-- Tasks -->
-<div id="tasks" class="col-md-4">
+<div id="tasks" class="col-md-6">
     @include('tasks.list')
 </div>
 

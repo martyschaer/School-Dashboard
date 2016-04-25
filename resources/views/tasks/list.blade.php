@@ -1,20 +1,27 @@
 @foreach($tasks as $task)
     <div class='task col-md-12'>
         <div class="col-md-1">
-            <input class="task-check" data-taskid="{{$task->id}}" type="checkbox" name="task{{$task->id}}"
+            <input title="check" class="task-check" data-taskid="{{$task->id}}" type="checkbox" name="task{{$task->id}}"
                    @if($task->is_done)
                    checked
                     @endif
             >
         </div>
-        <div class="task-description col-md-9">
-            <p
-                    @if($task->is_done)
-                    class='done'
-                    @endif
-            >
-                {{$task->description}}
-            </p>
+        <div class="task-description col-md-7">
+            <p data-taskid="{{$task->id}}" contenteditable="true"
+               @if($task->is_done)
+               class='done'
+               @endif
+            >{{$task->description}}</p>
+        </div>
+        <div class="col-md-3">
+             <span class="pull-right label label-danger"><i class="fa fa-clock-o"></i>
+                 @if(isset($task->due_at))
+                     {{$task->due_at->format('Y-m-d H:i')}}
+                 @else
+                     Nope
+                 @endif
+            </span>
         </div>
         <div class="col-md-1"><i data-taskid="{{$task->id}}" class="task-delete fa fa-trash"></i></div>
 
@@ -26,22 +33,16 @@
         <div class="input-group">
             <input class="form-control" type="text" name="description" placeholder="New Task">
 
-        </div>
-    </div>
-    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i></button>
+            <span class="input-group-btn">
+                <input class="form-control datepicker" type="text" name="due_at" placeholder="Due at">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i></button>
+            </span>
 
-    <div class="form-group">
-        <div class="input-group">
-            <input class="form-control datepicker" name="remind_at" placeholder="Reminder">
         </div>
+
     </div>
-</div>
-<div class="col-md-6">
-    <div class="form-group">
-        <div class="input-group">
-            <input class="form-control datepicker" name="due_at" placeholder="Due at">
-        </div>
-    </div>
+
+
 </div>
 
 {{ Form::close() }}
