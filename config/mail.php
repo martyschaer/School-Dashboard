@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => "no-reply@school-dashboard.dev", 'name' => "School-Dashboard"],
+    'from' => ['address' => "severin.kaderli@gmail.com", 'name' => "School-Dashboard"],
 
     /*
     |--------------------------------------------------------------------------
