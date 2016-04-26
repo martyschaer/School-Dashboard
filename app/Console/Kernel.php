@@ -27,10 +27,10 @@ class Kernel extends ConsoleKernel
                     ->where("due_at", "<", \DB::raw("NOW() + INTERVAL 1 HOUR"))
                     ->get();
 
-            foreach($tasks as $task) {
+            foreach($tasks as $taskObj) {
+                $task = Task::findOrFail($taskObj->id);
                 $user = $task->user;
-                $task->reminder_sent = 1;
-                $task->update();
+                $task->update(["reminder_sent" => 1]);
                 Mail::send('email.reminder', ["user" => $user, "task" => $task], function($m) use($user) {
                     $m->from('hello@app.com', 'School-Dashboard');
                     $m->to($user->email, $user->email)->subject("Reminder for task!");
