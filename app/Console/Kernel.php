@@ -6,8 +6,6 @@ use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use App\Task;
 use Mail;
-use App\User;
-use Carbon\Carbon;
 
 class Kernel extends ConsoleKernel
 {
@@ -19,20 +17,21 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        /**
+         * Send reminder e-mails 30 minutes before the task is due.
+         */
         $schedule->call(function() {
-            $tasks = \DB::table("tasks")
-                    ->where("is_done", 0)
+            $tasks = Task::where("is_done", 0)
                     ->where("reminder_sent", 0)
                     ->where("due_at", ">=", \DB::raw("NOW()"))
                     ->where("due_at", "<", \DB::raw("NOW() + INTERVAL 1 HOUR"))
                     ->get();
 
-            foreach($tasks as $taskObj) {
-                $task = Task::findOrFail($taskObj->id);
+            foreach($tasks as $task) {
                 $user = $task->user;
-                $task->update(["reminder_sent" => 1]);
+                $task->reminder_sent = 1;
+                $task->save();
                 Mail::send('email.reminder', ["user" => $user, "task" => $task], function($m) use($user) {
-                    $m->from('hello@app.com', 'School-Dashboard');
                     $m->to($user->email, $user->email)->subject("Reminder for task!");
                 });
             }
