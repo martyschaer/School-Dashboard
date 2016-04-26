@@ -20,9 +20,12 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->call(function() {
-            $tasks = Task::all()->where("is_done", 0)
-                                ->where("reminder_sent", 0)
-                                ->where("due_at", ">=", Carbon::now()->subMinutes(30));
+            $tasks = \DB::table("tasks")
+                    ->where("is_done", 0)
+                    ->where("reminder_sent", 0)
+                    ->where("due_at", ">=", \DB::raw("NOW()"))
+                    ->where("due_at", "<", \DB::raw("NOW() + INTERVAL 1 HOUR"))
+                    ->get();
 
             foreach($tasks as $task) {
                 $user = $task->user;

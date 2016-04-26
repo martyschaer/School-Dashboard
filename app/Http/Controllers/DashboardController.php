@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Task;
 use Auth;
 use Input;
+use Carbon\Carbon;
 class DashboardController extends Controller
 {
 
@@ -18,7 +19,6 @@ class DashboardController extends Controller
 
     public function index()
     {
-
         $tasks = Auth::user()->tasks;
         return View('dashboard.index', compact('tasks'));
     }
