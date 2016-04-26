@@ -1,5 +1,6 @@
 /vendor
 /resources/assets/vendor
+/public/vendor
 /resources/assets/css
 /node_modules
 /bower_components

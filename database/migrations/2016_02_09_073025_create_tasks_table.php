@@ -21,6 +21,7 @@ class CreateTasksTable extends Migration
             $table->increments('id');
             $table->text('description');
             $table->boolean('is_done')->default(0);
+            $table->boolean('reminder_sent')->default(0);
             $table->dateTime('due_at');
             $table->integer('user_id')->unsigned();
             $table->timestamps();
