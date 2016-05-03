@@ -29,30 +29,28 @@ $("#tasks").on("click", ".task-delete", function () {
     $.ajax({
         method: "PATCH",
         url: baseUrl + "/task/" + $(this).data("taskid") + "/check"
-    }).done(function () {
-        // Success!
     }).error(function (response) {
         console.error("Error:", response.responseText);
     });
 }).on("keydown", ".task-description > p", function (e) {
 
-    // On enter click leave the edit area and update the task.
+    // On enter click leave the edit area.
     if (e.which == 13) {
         e.preventDefault();
         $(this).blur();
-
-        var description = $(this).text();
-
-        $.ajax({
-            method: "PUT",
-            data: {
-                "description": description
-            },
-            url: baseUrl + "/task/" + $(this).data("taskid") + "/update"
-        }).done(function () {
-            //Success
-        }).error(function (response) {
-            console.error("Error:", response.responseText);
-        });
     }
+}).on("blur", ".task-description > p", function () {
+
+    // When the focus blurs we update the description of the task in the database.
+    var description = $(this).text();
+
+    $.ajax({
+        method: "PUT",
+        data: {
+            "description": description
+        },
+        url: baseUrl + "/task/" + $(this).data("taskid") + "/update"
+    }).error(function (response) {
+        console.error("Error:", response.responseText);
+    });
 });

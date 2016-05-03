@@ -29,4 +29,5 @@ Route::group(['middleware' => 'web'], function () {
     Route::delete('task/{id}/delete', "TaskController@destroy");
     Route::patch('task/{id}/check', "TaskController@check");
     Route::put('task/{id}/update', "TaskController@update");
+    Route::get('task/export/ical', "TaskController@export");
 });
