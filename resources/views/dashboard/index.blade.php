@@ -9,6 +9,12 @@
 
 <!-- Tasks -->
 <div id="tasks" class="col-md-6">
+    <div class="vertical-margin col-md-12">
+        <p>
+            <a class="btn btn-primary pull-right" href="{{url('/task/export/ical')}}">iCal Export</a>
+        </p>
+    </div>
+
     @include('tasks.list')
 </div>
 

@@ -1,5 +1,14 @@
 @import "_variables.scss";
+@import "../vendor/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../vendor/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+/**
+ *  Utility classes
+ */
+.vertical-margin {
+  margin-bottom: 20px;
+}
 
 /**
  * Sticky-Footer
