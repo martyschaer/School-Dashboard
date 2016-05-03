@@ -36,18 +36,31 @@ The management console is reachable here on [DigitalOcean](https://cloud.digital
 The Server can be accessed here: [46.101.226.85](http://46.101.226.85/)
 
 ## Documentation
+### PHPdoc
+Link to PHPdoc here.
+
 ### Library API-Docs
 * [Bootstrap](http://getbootstrap.com/)
-* [Bootstrap Material Design](http://fezvrasta.github.io/bootstrap-material-design/)
-* [Material icons](https://design.google.com/icons/)
+* [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
+* [Bootstrap 3 Datepicker](https://eonasdan.github.io/bootstrap-datetimepicker/)
+* [Laravel](https://laravel.com/docs/5.2)
 
-### Installation
-1. `git clone https://github.com/martyschaer/SchoolProject`
-2. `composer install`
-3. `bower install`
-4. Copy .env.example to .env
-5. Adjust settings in .env
-6. `php artisan key:generate`
-7. `php artisan migrate:refresh --seed`
-8. `npm install`
-9. `gulp build`
+## System requirements
+* An apache2-Webserver with PHP7
+* MySQL or MariaDB database server
+* [composer](https://getcomposer.org/)
+* [npm](https://nodejs.org/)
+* [bower](http://bower.io/)
+* [gulp](http://gulpjs.com/)
+
+## Installation
+1. Clone the repository: `git clone https://github.com/martyschaer/SchoolProject`
+2. Install composer dependencies: `composer install`
+3. Install bower dependencies: `bower install`
+4. Copy/rename .env.example to .env
+5. Adjust settings in .env (Database- and mail-settings)
+6. Create a laravel encryption key:`php artisan key:generate`
+7. Migrate the databases `php artisan migrate:refresh --seed`
+8. Install the dependencies for the frontend build system: `npm install`
+9. Build the frontend assets: `gulp build`
+10. Adding a cronjob (needed for reminders) `* * * * * php /path/to/artisan schedule:run >> /dev/null 2>&1`
