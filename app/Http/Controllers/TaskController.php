@@ -112,7 +112,7 @@ class TaskController extends Controller
         // Creating the .ical output
         $calendar = new \makinuk\ICalendar\ICalendar();
 
-        foreach($tasks as $task) {
+        foreach ($tasks as $task) {
             $event = new \makinuk\ICalendar\ICalEvent();
 
             $event->setUId(uniqid($task->id))

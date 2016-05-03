@@ -41,13 +41,20 @@ The Server can be accessed here: [46.101.226.85](http://46.101.226.85/)
 * [Bootstrap Material Design](http://fezvrasta.github.io/bootstrap-material-design/)
 * [Material icons](https://design.google.com/icons/)
 
-### Installation
-1. `git clone https://github.com/martyschaer/SchoolProject`
-2. `composer install`
-3. `bower install`
+## Installation
+### Requirements
+* composer
+* bower
+* gulp
+* A webserver running PHP7 and MySQL including cronjob support (for reminders)
+
+### Guide
+1. Clone the repository: `git clone https://github.com/martyschaer/SchoolProject`
+2. Install composer dependencies: `composer install`
+3. Install bower dependencies: `bower install`
 4. Copy .env.example to .env
-5. Adjust settings in .env
-6. `php artisan key:generate`
-7. `php artisan migrate:refresh --seed`
-8. `npm install`
-9. `gulp build`
+5. Adjust settings in .env (database, mail etc.)
+6. Create a laravel encryption key: `php artisan key:generate`
+7. Migrate the databases: `php artisan migrate:refresh --seed`
+8. Install the dependencies for the frontend build system: `npm install`
+9. Build the frontend assets: `gulp build`
