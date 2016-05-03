@@ -1,3 +1,8 @@
+<div class="vertical-margin col-md-12">
+    <p>
+        <a class="btn btn-primary pull-right" href="{{url('/task/export/ical')}}">iCal Export</a>
+    </p>
+</div>
 @foreach($tasks as $task)
     <div class='task col-md-12'>
         <div class="col-md-1">
