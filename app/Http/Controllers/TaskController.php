@@ -98,4 +98,40 @@ class TaskController extends Controller
         $tasks = Auth::user()->tasks;
         return View('tasks.list', compact('tasks'));
     }
+
+    /**
+     * Returns the tasks in .ical format.
+     *
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
+     */
+    public function export()
+    {
+        $user = Auth::user();
+        $tasks = Auth::user()->tasks;
+
+        // Creating the .ical output
+        $calendar = new \makinuk\ICalendar\ICalendar();
+
+        foreach($tasks as $task) {
+            $event = new \makinuk\ICalendar\ICalEvent();
+
+            $event->setUId(uniqid($task->id))
+                ->setStartDate($task->due_at->getTimestamp())
+                ->setEndDate($task->due_at->addMinutes(30)->getTimestamp())
+                ->setSummary($task->description)
+                ->setDescription($task->description)
+                ->setOrganizer(new \makinuk\ICalendar\ICalPerson($user->email, $user->email));
+
+            $calendar->addEvent($event);
+        }
+
+        $output = $calendar->getCalendarText();
+
+        // Automatically download the .ical file
+        $headers = [
+            "Content-Type" => 'text/calendar',
+            "Content-Disposition" => 'attachment; filename="tasks.ical"'
+        ];
+        return Response($output, 200, $headers);
+    }
 }
