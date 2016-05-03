@@ -2,7 +2,6 @@
 @import "../vendor/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../vendor/bootstrap-sass/assets/stylesheets/bootstrap";
 
-
 /**
  *  Utility classes
  */
@@ -14,27 +13,27 @@
  * Sticky-Footer
  */
 body {
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 main {
-	flex: 1;
+  flex: 1;
 }
 
 .footer {
-	/*TODO: Find a way to use the colors from bootstrap*/
-	background-color: #f8f8f8;
-	color: #000;
-	border-top: 1px solid #e7e7e7;
+  /*TODO: Find a way to use the colors from bootstrap*/
+  background-color: #f8f8f8;
+  color: #000;
+  border-top: 1px solid #e7e7e7;
 }
 
 .done {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 #timetable {
-    height: 500px;
-    overflow: scroll;
+  height: 500px;
+  overflow: scroll;
 }
