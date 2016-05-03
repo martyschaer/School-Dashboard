@@ -36,19 +36,22 @@ The management console is reachable here on [DigitalOcean](https://cloud.digital
 The Server can be accessed here: [46.101.226.85](http://46.101.226.85/)
 
 ## Documentation
+### PHPdoc
+Link to PHPdoc here.
+
 ### Library API-Docs
 * [Bootstrap](http://getbootstrap.com/)
-* [Bootstrap Material Design](http://fezvrasta.github.io/bootstrap-material-design/)
-* [Material icons](https://design.google.com/icons/)
+* [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
+* [Bootstrap 3 Datepicker](https://eonasdan.github.io/bootstrap-datetimepicker/)
+* [Laravel](https://laravel.com/docs/5.2)
 
-## Installation
-### Requirements
+## Requirements
 * composer
 * bower
 * gulp
 * A webserver running PHP7 and MySQL including cronjob support (for reminders)
 
-### Guide
+## Installation
 1. Clone the repository: `git clone https://github.com/martyschaer/SchoolProject`
 2. Install composer dependencies: `composer install`
 3. Install bower dependencies: `bower install`
@@ -58,3 +61,4 @@ The Server can be accessed here: [46.101.226.85](http://46.101.226.85/)
 7. Migrate the databases: `php artisan migrate:refresh --seed`
 8. Install the dependencies for the frontend build system: `npm install`
 9. Build the frontend assets: `gulp build`
+10. Adding a cronjob for the checking of reminders (* * * * * php /path/to/artisan schedule:run >> /dev/null 2>&1)
