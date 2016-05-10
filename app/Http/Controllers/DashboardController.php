@@ -9,6 +9,7 @@ use App\Task;
 use Auth;
 use Input;
 use Carbon\Carbon;
+
 class DashboardController extends Controller
 {
 
@@ -21,6 +22,7 @@ class DashboardController extends Controller
     {
         $tasks = Auth::user()->tasks;
         $lessons = Auth::user()->lessons;
-        return View('dashboard.index', compact('tasks', 'lessons'));
+        $weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',];
+        return View('dashboard.index', compact('tasks', 'lessons', 'weekdays'));
     }
 }

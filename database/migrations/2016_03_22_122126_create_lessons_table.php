@@ -18,7 +18,6 @@ class CreateLessonsTable extends Migration
             $table->text('details');
             $table->dateTime('time_start');
             $table->dateTime('time_end');
-            $table->integer('weekday');
             $table->integer('user_id')->unsigned();
             $table->timestamps();
 
