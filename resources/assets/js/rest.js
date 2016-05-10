@@ -1,3 +1,10 @@
+//Delete table cells in timetable that doesn't contain a &nbsp;
+$("#timetable td").each(function() {
+    if($(this).html() == "&nbsp;") {
+        $(this).remove();
+    }
+});
+
 $(".datepicker").datetimepicker({
     minDate: Date.now(),
     format: "YYYY-MM-DD HH:mm:ss",

@@ -15,15 +15,6 @@ Project for Module 306.
 	- MySQL
 	- Apache
 
-## Ideas
-- School Manager
-	- Grades
-	- Homework
-	- Tests
-	- Reminders
-	- Todo lists (sub tasks)
-	- timetable (location, teacher)
-
 ## Management
 All project management documents can be found on [Google Drive](https://drive.google.com/drive/folders/0B817XkuekfgYS1luV2RRSHpVOG8).
 
