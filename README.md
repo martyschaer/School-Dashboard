@@ -1,5 +1,5 @@
-# School-Dashboard [![Build Status](https://travis-ci.com/martyschaer/SchoolProject.svg?token=sbSe1s25snCdas4kvx7G&branch=master)](https://travis-ci.com/martyschaer/SchoolProject)
-Project for module 306
+# School-Dashboard [![Build Status](https://travis-ci.com/martyschaer/School-Dashboard.svg?token=TJhozVm4V6sqzmr5zGZF&branch=master)](https://travis-ci.com/martyschaer/School-Dashboard)
+Project for Module 306.
 
 # Ideas
 ## Technology

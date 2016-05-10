@@ -18,8 +18,12 @@ class CreateLessonsTable extends Migration
             $table->text('details');
             $table->dateTime('time_start');
             $table->dateTime('time_end');
-            $table->boolean('public');
+            $table->integer('weekday');
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
+
+            //Foreign keys
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

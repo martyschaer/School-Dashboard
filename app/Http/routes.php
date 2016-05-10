@@ -30,4 +30,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::patch('task/{id}/check', "TaskController@check");
     Route::put('task/{id}/update', "TaskController@update");
     Route::get('task/export/ical', "TaskController@export");
+
+    //Lessons
+    Route::post('lesson', "LessonController@store");
+    Route::delete('lesson/{id}/delete', "LessonController@destroy");
+    Route::put('lesson/{id}/update', "LessonController@update");
 });
