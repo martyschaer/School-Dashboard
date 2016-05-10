@@ -8,11 +8,11 @@ class Lesson extends Model
 {
 
     protected $fillable = [
-        'name', 'details'
+        'name', 'details', 'time_start', 'time_end'
     ];
 
     protected $dates = [
-        'time_start', 'time_end', 'created_at', 'updated_at'
+        'time_start ', 'time_end', 'created_at', 'updated_at'
     ];
 
     /**

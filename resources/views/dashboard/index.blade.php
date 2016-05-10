@@ -1,11 +1,14 @@
 @extends('app')
 @section('content')
 
-<div id="timetable" class="col-md-6">
-    @include('lessons.timetable')
-</div>
-<div id="timetable-input">
-    @include('lessons.create')
+<div class="col-md-6">
+    <div id="timetable">
+        @include('lessons.timetable')
+    </div>
+    <hr>
+    <div id="timetable-input">
+        @include('lessons.create')
+    </div>
 </div>
 
 <!-- Tasks -->

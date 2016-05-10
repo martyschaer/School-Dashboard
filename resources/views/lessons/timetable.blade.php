@@ -19,6 +19,7 @@
                 @endforeach
                 @if(!$putLesson)
                     <td></td>
+                @else
                     <?php $putLesson = false; ?>
                 @endif
             @endforeach
