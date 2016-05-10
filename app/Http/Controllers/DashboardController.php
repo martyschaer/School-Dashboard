@@ -20,6 +20,7 @@ class DashboardController extends Controller
     public function index()
     {
         $tasks = Auth::user()->tasks;
-        return View('dashboard.index', compact('tasks'));
+        $lessons = Auth::user()->lessons;
+        return View('dashboard.index', compact('tasks', 'lessons'));
     }
 }
