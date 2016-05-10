@@ -21,7 +21,7 @@ after_success:
     - export SSHPASS=$DEPLOY_PASS
     - mkdir build
     - cd build
-    - git clone --depth=50 --branch=$TRAVIS_BRANCH git@github.com:martyschaer/SchoolProject.git .
+    - git clone --depth=50 --branch=$TRAVIS_BRANCH git@github.com:martyschaer/School-Dashboard.git .
     - tar -czvf build.tar.gz .
     - sshpass -e scp -o stricthostkeychecking=no $TRAVIS_BUILD_DIR/deploy.sh build.tar.gz $DEPLOY_USER@$DEPLOY_HOST:/var/www/
     - sshpass -e ssh -t -t $DEPLOY_USER@$DEPLOY_HOST "chmod +x /var/www/deploy.sh; /var/www/deploy.sh | tee /var/www/log/deploy.log"
