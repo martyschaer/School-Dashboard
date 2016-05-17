@@ -4,6 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * The model representation of a lesson.
+ *
+ * @package App
+ * @author Marius Shcär
+ */
 class Lesson extends Model
 {
 

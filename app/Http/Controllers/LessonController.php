@@ -18,7 +18,7 @@ use Redirect;
 class LessonController extends Controller
 {
     /**
-     * Checks if the current user has permission to acces   s the lesson. If not
+     * Checks if the current user has permission to access the lesson. If not
      * the user is redirected to the dashboard.
      *
      * @param int $id
