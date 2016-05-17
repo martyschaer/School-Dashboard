@@ -1,6 +1,6 @@
-<table class="table table-striped">
+<table class="table table-striped table-bordered">
     <tr>
-        <th>time</th>
+        <th>Time</th>
         @foreach($weekdays as $weekday)
             <th>{{$weekday}}</th>
         @endforeach
@@ -8,7 +8,7 @@
     @for($hour = 1; $hour <= 24; $hour++)
         <tr>
             <?php $putLesson = false; ?>
-            <td>{{sprintf('%02d:00', $hour)}}</td>
+            <td class="timetable-time">{{sprintf('%02d:00', $hour)}}</td>
             @foreach($weekdays as $weekday)
                 @foreach($lessons as $lesson)
                     @if(date('l', strtotime($lesson->time_start)) == $weekday && date('G', strtotime($lesson->time_start)) == $hour)

@@ -22,6 +22,7 @@ Route::group(['middleware' => 'web'], function () {
         }
         return view('index');
     });
+    // Dashboard
     Route::get('dashboard', "DashboardController@index");
 
     // Tasks
@@ -35,4 +36,5 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('lesson', "LessonController@store");
     Route::delete('lesson/{id}/delete', "LessonController@destroy");
     Route::put('lesson/{id}/update', "LessonController@update");
+    Route::get('lesson/export/ical', "LessonController@export");
 });

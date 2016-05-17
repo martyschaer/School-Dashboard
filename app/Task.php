@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * The model representation of a task.
+ * Model representation of a task.
  *
  * @package App
  * @author Severin Kaderli
@@ -26,7 +26,9 @@ class Task extends Model
      *
      * @var array
      */
-    protected $dates = ['created_at', 'updated_at', 'due_at'];
+    protected $dates = [
+        'created_at', 'updated_at', 'due_at'
+    ];
 
     /**
      * Creates a relation between tasks and user models.

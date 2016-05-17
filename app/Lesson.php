@@ -13,16 +13,26 @@ use Illuminate\Database\Eloquent\Model;
 class Lesson extends Model
 {
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable = [
         'name', 'details', 'time_start', 'time_end'
     ];
 
+    /**
+     * Fields that should be represented by a Carbon-Object.
+     *
+     * @var array
+     */
     protected $dates = [
-        'time_start ', 'time_end', 'created_at', 'updated_at'
+        'created_at', 'updated_at', 'time_start', 'time_end'
     ];
 
     /**
-     * Creates relation between lesson and user
+     * Creates relation between lesson and user.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -30,4 +40,6 @@ class Lesson extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+
 }
