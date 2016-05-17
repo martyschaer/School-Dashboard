@@ -5,10 +5,10 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Model representation of a lesson.
+ * The model representation of a lesson.
  *
  * @package App
- * @author Marius Schär
+ * @author Marius Shcär
  */
 class Lesson extends Model
 {
