@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
-
 use App\Http\Requests;
 use App\Lesson;
 use Auth;
@@ -11,14 +9,15 @@ use Illuminate\Support\Facades\Input;
 use Redirect;
 
 /**
- * Class LessonController
+ * Controller that handles all interaction with lessons.
+ *
  * @package App\Http\Controllers
  * @author Marius Schär
  */
 class LessonController extends Controller
 {
     /**
-     * Checks if the current user has permission to acces   s the lesson. If not
+     * Checks if the current user has permission to access the lesson. If not
      * the user is redirected to the dashboard.
      *
      * @param int $id
@@ -81,5 +80,42 @@ class LessonController extends Controller
         // Return the updated list of tasks
         $lessons = Auth::user()->lessons;
         return View('lessons.list', compact('lessons'));
+    }
+
+    /**
+     * Export the current users lesson in the .ical format.
+     *
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
+     */
+    public function export()
+    {
+        $user = Auth::user();
+        $lessons = Auth::user()->lessons;
+
+        // Creating the .ical output
+        $calendar = new \makinuk\ICalendar\ICalendar();
+
+        foreach ($lessons as $lesson) {
+            $event = new \makinuk\ICalendar\ICalEvent();
+
+            $event->setUId(uniqid($lesson->id))
+                ->setStartDate($lesson->time_start->getTimestamp())
+                ->setEndDate($lesson->time_end->getTimestamp())
+                ->setSummary($lesson->name)
+                ->setDescription($lesson->details)
+                ->setOrganizer(new \makinuk\ICalendar\ICalPerson($user->email, $user->email));
+
+            $calendar->addEvent($event);
+        }
+
+        $output = $calendar->getCalendarText();
+
+        // Automatically download the .ical file
+        $headers = [
+            "Content-Type" => 'text/calendar',
+            "Content-Disposition" => 'attachment; filename="lessons.ical"'
+        ];
+        return Response($output, 200, $headers);
+
     }
 }

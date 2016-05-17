@@ -1,4 +1,4 @@
-@import "_variables.scss";
+/*@import "_variables.scss";*/
 @import "../vendor/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../vendor/bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -9,31 +9,30 @@
   margin-bottom: 20px;
 }
 
+.container {
+  width: 100%;
+}
+
 /**
- * Sticky-Footer
+ * Tasks
  */
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
-
-.footer {
-  /*TODO: Find a way to use the colors from bootstrap*/
-  background-color: #f8f8f8;
-  color: #000;
-  border-top: 1px solid #e7e7e7;
-}
-
 .done {
   text-decoration: line-through;
 }
 
+/**
+ * Timetable
+ */
 #timetable {
-  height: 500px;
+  height: 300px;
   overflow: scroll;
+}
+
+.lesson{
+  background-color: #337AB7;
+  color: #FFFFFF;
+}
+
+.timetable-time {
+  vertical-align: middle !important;
 }
