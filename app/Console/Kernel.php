@@ -7,6 +7,13 @@ use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use App\Task;
 use Mail;
 
+/**
+ * This class defines console schedule jobs. These are then executed using
+ * a cronjob.
+ *
+ * @package App\Console
+ * @author Severin Kaderli
+ */
 class Kernel extends ConsoleKernel
 {
     /**

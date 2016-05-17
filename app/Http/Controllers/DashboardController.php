@@ -27,6 +27,8 @@ class DashboardController extends Controller
     }
 
     /**
+     * Display the dashboard with the timetable
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()

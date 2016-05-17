@@ -3,6 +3,11 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+ * Creates the lessons table.
+ *
+ * @author Marius Schär
+ */
 class CreateLessonsTable extends Migration
 {
     /**

@@ -1,6 +1,15 @@
+/**
+ * This file is all of the needed javascript code for the application.
+ *
+ * @author Severin Kaderli
+ */
+
+/**
+ * Initialise the datetimepicker
+ */
 $(".datepicker").datetimepicker({
     minDate: Date.now(),
-    format: "YYYY-MM-DD HH:mm:ss",
+    format: "YYYY-MM-DD HH:mm",
     sideBySide: true,
     icons: {
         time: "fa fa-clock-o",
@@ -15,6 +24,9 @@ $(".datepicker").datetimepicker({
     }
 });
 
+/**
+ * Sent the CSRF-Token in every AJAX request to prevent CSRF issues.
+ */
 $.ajaxSetup({
     headers: {
         "X-CSRF-TOKEN": $("meta[name='csrf-token']").attr("content")
@@ -22,7 +34,9 @@ $.ajaxSetup({
 });
 var baseUrl = $("meta[name='base-url']").attr("content");
 
-//<a data-taskid="3">Delete</a>
+/**
+ * All logic that is done using AJAX.
+ */
 $("#tasks").on("click", ".task-delete", function () {
     if (!confirm("Do you really want to delete this task?")) {
         return true;
