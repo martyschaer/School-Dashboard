@@ -1,6 +1,6 @@
-<table class="table table-striped">
+<table class="table table-striped table-bordered">
     <tr>
-        <th>time</th>
+        <th>Time</th>
         @foreach($weekdays as $weekday)
             <th>{{$weekday}}</th>
         @endforeach

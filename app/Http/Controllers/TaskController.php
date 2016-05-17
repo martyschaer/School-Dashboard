@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Http\Requests;
 use App\Task;
 use Auth;
@@ -10,9 +9,9 @@ use Illuminate\Support\Facades\Input;
 use Redirect;
 
 /**
- * Class TaskController
- * @package App\Http\Controllers
+ * Controller that handles all interaction with tasks.
  *
+ * @package App\Http\Controllers
  * @author Severin Kaderli
  */
 class TaskController extends Controller
