@@ -1,5 +1,5 @@
 <ul class="nav navbar-nav">
-  <li><a href="{{url('/dashboard')}}">Dashboard</a></li>
+    <li><a href="{{url('/dashboard')}}">Dashboard</a></li>
 </ul>
 
 <p class='navbar-text'>Logged in as {{Auth::user()->email}}</p>
