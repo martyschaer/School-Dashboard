@@ -21,7 +21,7 @@ after_success:
     - export SSHPASS=$DEPLOY_PASS
     - mkdir build
     - cd build
-    - travis pubkey
+    - cat ~/.ssh/id_rsa.pub
     - git clone --depth=50 --branch=$TRAVIS_BRANCH git@github.com:martyschaer/SchoolDashboard.git .
     - tar -czvf build.tar.gz .
     - sshpass -e scp -o stricthostkeychecking=no $TRAVIS_BUILD_DIR/deploy.sh build.tar.gz $DEPLOY_USER@$DEPLOY_HOST:/var/www/
