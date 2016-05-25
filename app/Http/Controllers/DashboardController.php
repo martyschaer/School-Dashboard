@@ -3,11 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\Task;
 use Auth;
-use Input;
-use Carbon\Carbon;
 
 /**
  * Controller that handles all interaction with the dashboard.
@@ -27,6 +23,8 @@ class DashboardController extends Controller
     }
 
     /**
+     * Display the dashboard with the timetable
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()

@@ -1,6 +1,8 @@
 #!/bin/bash
 echo "Starting deploy script: $(date +%Y-%m-%d.%H:%M:%S)"
 
+whoami
+
 echo "Extracting tar file"
 rm -rf /var/www/html/
 mkdir /var/www/html
