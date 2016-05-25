@@ -1,4 +1,4 @@
-# School-Dashboard [![Build Status](https://travis-ci.org/martyschaer/School-Dashboard.svg?token=TJhozVm4V6sqzmr5zGZF&branch=master)](https://travis-ci.com/martyschaer/School-Dashboard)
+# School-Dashboard [![Build Status](https://travis-ci.org/martyschaer/SchoolDashboard.svg?branch=master)](https://travis-ci.org/martyschaer/SchoolDashboard)
 Project for Module 306.
 
 # Ideas
