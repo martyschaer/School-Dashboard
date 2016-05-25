@@ -58,4 +58,4 @@ Link to PHPdoc here.
 10. Adding a cronjob (needed for reminders) `* * * * * php /path/to/artisan schedule:run >> /dev/null 2>&1`
 
 
-make travis greater again
+make travis even greater again
