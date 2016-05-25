@@ -56,3 +56,6 @@ Link to PHPdoc here.
 8. Install the dependencies for the frontend build system: `npm install`
 9. Build the frontend assets: `gulp build`
 10. Adding a cronjob (needed for reminders) `* * * * * php /path/to/artisan schedule:run >> /dev/null 2>&1`
+
+
+make travis even greater again
