@@ -9,7 +9,7 @@
  */
 $(".datepicker").datetimepicker({
     minDate: Date.now(),
-    format: "YYYY-MM-DD HH:mm",
+    format: "YYYY-MM-DD HH:mm:ss",
     sideBySide: true,
     icons: {
         time: "fa fa-clock-o",
