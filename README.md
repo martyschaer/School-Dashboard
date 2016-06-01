@@ -23,7 +23,7 @@ Link to PHPdoc here.
 * [Laravel](https://laravel.com/docs/5.2)
 
 ## System requirements
-* An apache2-Webserver with PHP7
+* An apache2-Webserver with PHP
 * MySQL or MariaDB database server
 * [composer](https://getcomposer.org/)
 * [npm](https://nodejs.org/)
