@@ -14,7 +14,7 @@ The Server can be accessed here: [46.101.226.85](http://46.101.226.85/)
 
 ## Documentation
 ### PHPdoc
-Link to PHPdoc here.
+Currently not compatible with php7.
 
 ### Library API-Docs
 * [Bootstrap](http://getbootstrap.com/)
